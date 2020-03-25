@@ -6,16 +6,16 @@ module.exports = {
   add
 }
 
-function get() {
+function get(id) {
   return db('users')
 }
 
 function getBy(filter) {
   return db('users')
-    .where({ filter })
+    .where(filter)
 }
 
 async function add(user) {
   const [id] = await db('users').insert(user, 'id')
-  return getBy(id).first()
+  return getBy({ id })
 } 

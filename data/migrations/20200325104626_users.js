@@ -3,14 +3,14 @@ exports.up = function (knex) {
     urs.increments()
 
     urs.varchar('username', 128)
-      .unique
-      .notNullable
+      .unique()
+      .notNullable()
 
     urs.varchar('password', 128)
-      .notNullable
+      .notNullable()
 
     urs.string('department')
-      .notNullable
+      .notNullable()
   })
 };
 
