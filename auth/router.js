@@ -33,7 +33,7 @@ router.post('/login', (req, res) => {
       subject: user.id,
       username: user.username
     }
-    const secret = '1209i012i3j0a9sd0aj0'
+    const secret = mysecret
     const options = {
       expiresIn: '1d'
     }
